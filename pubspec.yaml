@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animated_text_kit: ^4.3.0
   bloc: ^9.2.1
   cupertino_icons: ^1.0.8
   dio: ^5.9.2
@@ -71,7 +72,6 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: assets/fonts/Montserrat-Regular.ttf
-
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
@@ -80,10 +80,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
-
 flutter_assets:
   assets_path: assets/
   output_path: lib/core/utils
   filename: assets.dart
-  field_prefix: 
+  field_prefix: null
   ignore_comments: true
