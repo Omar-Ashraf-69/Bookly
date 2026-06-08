@@ -1,8 +1,10 @@
+import 'package:bookly/core/utils/app_routers.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -49,14 +51,22 @@ class HomeViewBody extends StatelessWidget {
                 itemCount: 10,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return Container(
-                    padding: EdgeInsets.only(right: 16),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(24),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadiusGeometry.circular(24),
-                      child: Image.asset(Assets.imagesCover, fit: BoxFit.cover),
+                  return GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouters.kSearchView);
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(right: 16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadiusGeometry.circular(24),
+                        child: Image.asset(
+                          Assets.imagesCover,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
                   );
                 },
