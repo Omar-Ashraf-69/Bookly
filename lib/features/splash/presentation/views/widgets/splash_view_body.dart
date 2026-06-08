@@ -1,6 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:bookly/core/functions/func.dart';
 import 'package:bookly/core/utils/app_routers.dart';
 import 'package:bookly/core/utils/assets.dart';
+import 'package:bookly/features/splash/presentation/views/widgets/animated_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:go_router/go_router.dart';
@@ -17,10 +19,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(seconds: 3), () {
-      if (!mounted) return;
-      GoRouter.of(context).go(AppRouters.kHomeView);
-    });
+    navigateToHomeView(mounted, context);
   }
 
   @override
@@ -35,24 +34,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           children: [
             Image.asset(Assets.imagesLogo, width: 300.w),
             SizedBox(height: 24.h),
-            SizedBox(
-              width: double.infinity,
-              child: Align(
-                alignment: AlignmentGeometry.center,
-                child: DefaultTextStyle(
-                  style: TextStyle(fontSize: 24.sp, fontFamily: 'Agne'),
-                  child: AnimatedTextKit(
-                    isRepeatingAnimation: false,
-                    animatedTexts: [
-                      TypewriterAnimatedText(
-                        "Read free books",
-                        speed: Duration(milliseconds: 100),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+            AnimatedSplashViewTextWidget(),
           ],
         ),
       ),
