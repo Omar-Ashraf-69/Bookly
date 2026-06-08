@@ -1,13 +1,10 @@
-import 'package:bookly/core/utils/app_routers.dart';
-import 'package:bookly/core/utils/assets.dart';
-import 'package:bookly/core/utils/styles.dart';
-import 'package:bookly/features/home/presentation/views/widgets/best_seller_listview_widget.dart';
-import 'package:bookly/features/home/presentation/views/widgets/books_listview_widget.dart';
-import 'package:bookly/features/home/presentation/views/widgets/home_view_customer_appbar.dart';
+
+import '../../../../../core/utils/styles.dart';
+import 'best_seller_listview_widget.dart';
+import 'books_listview_widget.dart';
+import 'home_view_customer_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:go_router/go_router.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

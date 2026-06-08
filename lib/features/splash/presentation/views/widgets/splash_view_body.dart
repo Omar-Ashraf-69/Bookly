@@ -1,11 +1,8 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:bookly/core/functions/func.dart';
-import 'package:bookly/core/utils/app_routers.dart';
-import 'package:bookly/core/utils/assets.dart';
-import 'package:bookly/features/splash/presentation/views/widgets/animated_text_widget.dart';
+import '../../../../../core/functions/func.dart';
+import '../../../../../core/utils/assets.dart';
+import 'animated_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

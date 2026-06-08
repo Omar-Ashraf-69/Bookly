@@ -1,4 +1,4 @@
-import 'package:bookly/constants.dart';
+import '../../constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:google_fonts/google_fonts.dart';

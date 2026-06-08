@@ -1,4 +1,4 @@
-import 'package:bookly/core/utils/app_routers.dart';
+import '../utils/app_routers.dart';
 import 'package:go_router/go_router.dart';
 
 Future<Null> navigateToHomeView(bool mounted, context) {
