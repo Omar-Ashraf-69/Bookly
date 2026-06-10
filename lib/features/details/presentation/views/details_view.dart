@@ -1,20 +1,19 @@
-
-import 'widgets/search_view_appbar.dart';
-import 'widgets/searched_book_details_widget.dart';
+import 'widgets/details_view_appbar.dart';
+import 'widgets/book_details_widget.dart';
 import 'widgets/you_can_also_like_section.dart';
 import 'package:flutter/material.dart';
 
-class SearchView extends StatelessWidget {
-  const SearchView({super.key});
+class DetailsView extends StatelessWidget {
+  const DetailsView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: SearchViewBody());
+    return const Scaffold(body: DetailsViewBody());
   }
 }
 
-class SearchViewBody extends StatelessWidget {
-  const SearchViewBody({super.key});
+class DetailsViewBody extends StatelessWidget {
+  const DetailsViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +21,10 @@ class SearchViewBody extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: 14),
-          SearchViewAppbarWidget(),
+          DetailsViewAppbarWidget(),
           SizedBox(height: 28),
-          SearchedBookDetailsWidget(),
-          SizedBox(height: 24),
+          BookDetailsWidget(),
+          SizedBox(height: 20),
           YouCanAlsoLikeSection(),
           SizedBox(height: 18),
         ],

@@ -1,13 +1,10 @@
-
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
 class BestSellerListViewWidget extends StatelessWidget {
-  const BestSellerListViewWidget({
-    super.key,
-  });
+  const BestSellerListViewWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,19 +33,16 @@ class BestSellerListViewWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Harry Potter and the Goblet of Fire",
+                            "Harry Potter and the Goblet of Fire ",
                             style: AppStyles.interRegular20,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text(
                             "J.K. Rowling",
-                            style: AppStyles.montserratMedium14
-                                .copyWith(
-                                  color: Colors.white.withValues(
-                                    alpha: 0.7,
-                                  ),
-                                ),
+                            style: AppStyles.montserratMedium14.copyWith(
+                              color: Colors.white.withValues(alpha: 0.7),
+                            ),
                           ),
                           Row(
                             children: [
@@ -72,8 +66,7 @@ class BestSellerListViewWidget extends StatelessWidget {
                                   SizedBox(width: 4),
                                   Text(
                                     "(4321)",
-                                    style:
-                                        AppStyles.montserratRegular14,
+                                    style: AppStyles.montserratRegular14,
                                   ),
                                 ],
                               ),

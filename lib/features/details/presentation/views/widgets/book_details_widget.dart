@@ -3,8 +3,8 @@ import '../../../../../core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
-class SearchedBookDetailsWidget extends StatelessWidget {
-  const SearchedBookDetailsWidget({super.key});
+class BookDetailsWidget extends StatelessWidget {
+  const BookDetailsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

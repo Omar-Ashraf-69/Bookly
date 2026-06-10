@@ -19,7 +19,7 @@ class BooksListViewWidget extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              GoRouter.of(context).push(AppRouters.kSearchView);
+              GoRouter.of(context).push(AppRouters.kDetailsView);
             },
             child: Container(
               padding: EdgeInsets.only(right: 16),
