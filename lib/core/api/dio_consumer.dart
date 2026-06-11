@@ -30,7 +30,7 @@ class DioConsumer implements ApiConsumer {
   }) async {
     try {
       final response = await dio.get(
-        EndPoints.baseUrl,
+        path,
         queryParameters: quearyParamteries,
       );
       return response.data;

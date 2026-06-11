@@ -21,4 +21,7 @@ class ApiKey {
   static String rating = "rating";
   static String name = "name";
   static String average = "average";
+
+    static String books = "books";
+
 }

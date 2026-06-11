@@ -1,33 +1,32 @@
-import '../../../../../core/utils/assets.dart';
+import 'package:bookly/core/widgets/book_details_text_widgets.dart';
+import 'package:bookly/core/widgets/custom_book_cover.dart';
+import 'package:bookly/features/home/data/models/book_model.dart';
+
 import '../../../../../core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
 class BookDetailsWidget extends StatelessWidget {
-  const BookDetailsWidget({super.key});
-
+  const BookDetailsWidget({super.key, required this.book});
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          Assets.imagesCover,
-          height: MediaQuery.of(context).size.height / 3,
-          width: MediaQuery.of(context).size.height / 3,
-        ),
+        CustomBookCoverWidget(img: book.image),
         SizedBox(height: 32),
-        Text("The Jungle Book", style: AppStyles.interRegular30),
+        Text(book.title, style: AppStyles.interRegular30),
         SizedBox(height: 4),
-        Text("Rudyard Kipling", style: AppStyles.montserratMedium18),
+        Text(book.authors[0].name, style: AppStyles.montserratMedium18),
         SizedBox(height: 6),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.star, color: Colors.amber),
+            SizedBox(width: 2),
+            RatingTextWidget(book: book),
             SizedBox(width: 4),
-            Text("4.2"),
-            SizedBox(width: 4),
-            Text("(4212)"),
+            ReviewsTextWidget(book: book),
           ],
         ),
         SizedBox(height: 24),
@@ -48,8 +47,8 @@ class BookDetailsWidget extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "19.9\$",
-                      style: AppStyles.montserratSemiBold18.copyWith(
+                      "${(book.id % 100).toString()} \$",
+                      style: AppStyles.montserratBold20.copyWith(
                         color: Colors.black,
                       ),
                     ),

@@ -13,16 +13,18 @@ class HomeRepo {
   Future<Either<String, List<BookModel>>> getBooks() async {
     try {
       final response = await api.get(
-        EndPoints.searchBooks,
+      EndPoints.searchBooks,
         quearyParamteries: {
-          ApiKey.query: "promgramming",
+          ApiKey.query: "programming",
           ApiKey.number: 50,
           ApiKey.apiKey: kApiKey,
         },
       );
-      List<BookModel> books =  (response as List)
+      final books = (response[ApiKey.books] as List)
+        .expand((e) => e as List)
         .map((book) => BookModel.fromJson(book))
-        .toList() ;
+        .toList();
+
       return right(books);
     } on ServerException catch (e) {
       return left(e.errModel.message);
