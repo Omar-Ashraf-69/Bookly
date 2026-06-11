@@ -1,7 +1,4 @@
 import 'package:bookly/core/utils/service_locator.dart';
-import 'package:bookly/features/home/presentation/cubit/cubit/book_cubit.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'constants.dart';
 import 'core/utils/app_routers.dart';
 import 'package:flutter/material.dart';
@@ -23,16 +20,13 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return BlocProvider(
-          create: (context) => getIt<BookCubit>()..getBooks(),
-          child: MaterialApp.router(
-            routerConfig: AppRouters.router,
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData.dark().copyWith(
-              scaffoldBackgroundColor: kPrimaryColor,
-              textTheme: GoogleFonts.montserratTextTheme(
-                ThemeData.dark().textTheme,
-              ),
+        return MaterialApp.router(
+          routerConfig: AppRouters.router,
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData.dark().copyWith(
+            scaffoldBackgroundColor: kPrimaryColor,
+            textTheme: GoogleFonts.montserratTextTheme(
+              ThemeData.dark().textTheme,
             ),
           ),
         );

@@ -15,7 +15,16 @@ class BookDetailsWidget extends StatelessWidget {
       children: [
         CustomBookCoverWidget(img: book.image),
         SizedBox(height: 32),
-        Text(book.title, style: AppStyles.interRegular30),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          child: Text(
+            book.title,
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: AppStyles.interRegular30,
+          ),
+        ),
         SizedBox(height: 4),
         Text(book.authors[0].name, style: AppStyles.montserratMedium18),
         SizedBox(height: 6),

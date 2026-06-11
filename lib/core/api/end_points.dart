@@ -2,6 +2,9 @@ class EndPoints {
   static String baseUrl = "https://api.bigbookapi.com/";
   static String searchBooks = "search-books";
   static String quary = "query";
+  static String similarBooks(int id) {
+    return "$id/similar";
+  }
 }
 
 class ApiKey {
@@ -22,6 +25,6 @@ class ApiKey {
   static String name = "name";
   static String average = "average";
 
-    static String books = "books";
-
+  static String books = "books";
+  static String similarBooks = "similar_books";
 }

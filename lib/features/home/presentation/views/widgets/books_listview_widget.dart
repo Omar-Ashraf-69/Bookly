@@ -34,8 +34,9 @@ class BooksListViewWidget extends StatelessWidget {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
-                  GoRouter.of(context).push(AppRouters.kDetailsView ,   extra: cubit.books![index],
-);
+                  GoRouter.of(
+                    context,
+                  ).push(AppRouters.kDetailsView, extra: cubit.books![index]);
                 },
                 child: AspectRatio(
                   aspectRatio: 3 / 4,
