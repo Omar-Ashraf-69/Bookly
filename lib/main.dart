@@ -20,16 +20,17 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp.router(
-          routerConfig: AppRouters.router,
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData.dark().copyWith(
-            scaffoldBackgroundColor: kPrimaryColor,
-            textTheme: GoogleFonts.montserratTextTheme(
-              ThemeData.dark().textTheme,
-            ),
-          ),
-        );
+        return  MaterialApp.router(
+                routerConfig: AppRouters.router,
+                debugShowCheckedModeBanner: false,
+                theme: ThemeData.dark().copyWith(
+                  scaffoldBackgroundColor: kPrimaryColor,
+                  textTheme: GoogleFonts.montserratTextTheme(
+                    ThemeData.dark().textTheme,
+                  ),
+                ),
+              );
+            
       },
     );
   }
