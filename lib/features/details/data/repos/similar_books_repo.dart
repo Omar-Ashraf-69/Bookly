@@ -18,11 +18,9 @@ class SimilarBooksRepo {
         EndPoints.similarBooks(id),
         quearyParamteries: {ApiKey.apiKey: kApiKey, ApiKey.number: 20},
       );
- final List data = response[ApiKey.similarBooks];
+      final List data = response[ApiKey.similarBooks];
 
-    final books = data
-        .map((e) => SimilarBookModel.fromJson(e))
-        .toList();
+      final books = data.map((e) => SimilarBookModel.fromJson(e)).toList();
       return right(books);
     } on ServerException catch (e) {
       return left(e.errModel.message);
